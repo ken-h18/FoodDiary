@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.hooper.kenneth.fooddiary.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headingLayout"
+                    android:weightSum="1.0">
+                        <TextView
+                            android:id="@+id/titleText"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="Food Diary" />
+
+
+                        <TextView
+                            android:id="@+id/titleText2"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="Date" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/hexLayout"
+                    android:background="@color/diaryFieldBackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/headingLayout"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/hexAText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="A"
+                        android:layout_weight="0.05"/>
+
+                    <EditText
+                        android:id="@+id/hexAEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Enter text..."
+                        android:layout_weight="0.45"/>
+
+                    <TextView
+                        android:id="@+id/hexBText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="B"
+                        android:layout_weight="0.05"/>
+
+                    <EditText
+                        android:id="@+id/hexBEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Enter text..."
+                        android:layout_weight="0.45"/>
+
+                </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/breakfastLayout"
+        android:layout_below="@id/hexLayout"
+        android:background="@color/diaryFieldBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:weightSum="1.0">
+
+        <EditText
+            android:id="@+id/breakfastEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:text="Breakfast Text..." />
+
+        <TextView
+            android:id="@+id/breakfastText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Breakfast" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lunchLayout"
+        android:layout_below="@id/breakfastLayout"
+        android:background="@color/diaryFieldBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/lunchText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Lunch" />
+
+        <EditText
+            android:id="@+id/lunchEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:text="Lunch Text..." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/dinnerLayout"
+        android:layout_below="@id/lunchLayout"
+        android:background="@color/diaryFieldBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/dinnerText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Dinner" />
+
+        <EditText
+            android:id="@+id/dinnerEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:text="Dinner Text..." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/snacksLayout"
+        android:layout_below="@id/dinnerLayout"
+        android:background="@color/diaryFieldBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/snacksText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Snacks" />
+
+        <EditText
+            android:id="@+id/snacksEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:text="Snacks Text..." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/exerciseLayout"
+        android:layout_below="@id/snacksLayout"
+        android:background="@color/diaryFieldBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/exerciseText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Exercise" />
+
+        <EditText
+            android:id="@+id/exerciseEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:text="Exercise Text..." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/waterLayout"
+        android:layout_below="@id/exerciseLayout"
+        android:background="@color/diaryFieldBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/waterText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Water" />
+
+        <EditText
+            android:id="@+id/waterEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:text="Water Images..." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/treatsLayout"
+        android:layout_below="@id/waterLayout"
+        android:background="@color/diaryFieldBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/treatsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Treats" />
+
+        <EditText
+            android:id="@+id/treatsEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:text="Treats Images..." />
+
+    </LinearLayout>
+
+</RelativeLayout>

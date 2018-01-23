@@ -13,20 +13,32 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/headingLayout"
                     android:weightSum="1.0">
-                        <TextView
+                        <!--<TextView
                             android:id="@+id/titleText"
                             android:layout_width="0dp"
                             android:layout_weight=".5"
+                            android:textSize="25sp"
                             android:layout_height="wrap_content"
-                            android:text="Food Diary" />
+                            android:text="@string/title" />-->
 
 
                         <TextView
-                            android:id="@+id/titleText2"
+                            android:id="@+id/dateText"
                             android:layout_width="0dp"
-                            android:layout_weight=".5"
+                            android:layout_weight=".30"
+                            android:textSize="25sp"
                             android:layout_height="wrap_content"
-                            android:text="Date" />
+                            android:gravity="center"
+                            android:text="@string/date" />
+
+                        <TextView
+                            android:id="@+id/dateEdit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="23-01-2018"
+                            android:textSize="25sp"
+                            android:layout_weight="0.70"/>
 
                 </LinearLayout>
 
@@ -49,28 +61,38 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="A"
-                        android:layout_weight="0.05"/>
+                        android:textSize="20sp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:layout_weight="0.08"/>
 
                     <EditText
                         android:id="@+id/hexAEdit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Enter text..."
-                        android:layout_weight="0.45"/>
+                        android:layout_weight="0.42"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"/>
 
                     <TextView
                         android:id="@+id/hexBText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="B"
-                        android:layout_weight="0.05"/>
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:textSize="20sp"
+                        android:layout_weight="0.08"/>
 
                     <EditText
                         android:id="@+id/hexBEdit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Enter text..."
-                        android:layout_weight="0.45"/>
+                        android:layout_weight="0.42"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"/>
 
                 </LinearLayout>
 
@@ -87,19 +109,25 @@
         android:layout_marginBottom="5dp"
         android:weightSum="1.0">
 
-        <EditText
-            android:id="@+id/breakfastEdit"
-            android:layout_width="0dp"
-            android:layout_weight="0.8"
-            android:layout_height="70dp"
-            android:text="Breakfast Text..." />
-
         <TextView
             android:id="@+id/breakfastText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="Breakfast" />
+            android:layout_weight="0.3"
+            android:text="Breakfast"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
+
+        <EditText
+            android:id="@+id/breakfastEdit"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="70dp"
+            android:background="@android:color/transparent"
+            android:text="Breakfast Text..."
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
     </LinearLayout>
 
@@ -120,15 +148,20 @@
             android:id="@+id/lunchText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="Lunch" />
+            android:layout_weight="0.3"
+            android:text="Lunch"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
         <EditText
             android:id="@+id/lunchEdit"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Lunch Text..." />
+            android:text="Lunch Text..."
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
     </LinearLayout>
 
@@ -149,15 +182,20 @@
             android:id="@+id/dinnerText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="Dinner" />
+            android:layout_weight="0.3"
+            android:text="Dinner"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
         <EditText
             android:id="@+id/dinnerEdit"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Dinner Text..." />
+            android:text="Dinner Text..."
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
     </LinearLayout>
 
@@ -178,15 +216,20 @@
             android:id="@+id/snacksText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="Snacks" />
+            android:layout_weight="0.3"
+            android:text="Snacks"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
         <EditText
             android:id="@+id/snacksEdit"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Snacks Text..." />
+            android:text="Snacks Text..."
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
     </LinearLayout>
 
@@ -207,15 +250,20 @@
             android:id="@+id/exerciseText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="Exercise" />
+            android:layout_weight="0.3"
+            android:text="Exercise"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
         <EditText
             android:id="@+id/exerciseEdit"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Exercise Text..." />
+            android:text="Exercise Text..."
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
     </LinearLayout>
 
@@ -236,15 +284,20 @@
             android:id="@+id/waterText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="Water" />
+            android:layout_weight="0.3"
+            android:text="Water"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
         <EditText
             android:id="@+id/waterEdit"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Water Images..." />
+            android:text="Water Images..."
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
     </LinearLayout>
 
@@ -265,15 +318,20 @@
             android:id="@+id/treatsText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="Treats" />
+            android:layout_weight="0.3"
+            android:text="Treats"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
         <EditText
             android:id="@+id/treatsEdit"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Treats Images..." />
+            android:text="Treats Images..."
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
 
     </LinearLayout>
 

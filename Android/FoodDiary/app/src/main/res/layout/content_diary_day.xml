@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.hooper.kenneth.fooddiary.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/headingLayout"
                     android:weightSum="1.0">
-                        <!--<TextView
-                            android:id="@+id/titleText"
-                            android:layout_width="0dp"
-                            android:layout_weight=".5"
-                            android:textSize="25sp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title" />-->
-
 
                         <TextView
                             android:id="@+id/dateText"
@@ -42,58 +39,83 @@
 
                 </LinearLayout>
 
-
                 <LinearLayout
+                    android:baselineAligned="false"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:id="@+id/hexLayout"
-                    android:background="@color/diaryFieldBackground"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_marginBottom="2.5dp"
                     android:layout_below="@id/headingLayout"
                     android:weightSum="1.0">
 
-                    <TextView
-                        android:id="@+id/hexAText"
+                    <LinearLayout
+                        android:id="@+id/hexALayout"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="A"
-                        android:textSize="20sp"
-                        android:paddingLeft="3dp"
-                        android:paddingRight="3dp"
-                        android:layout_weight="0.08"/>
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/rounded_corner"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:weightSum="1.0">
+                        <TextView
+                            android:id="@+id/hexAText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hexA"
+                            android:textSize="20sp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:layout_weight="0.16"/>
 
-                    <EditText
-                        android:id="@+id/hexAEdit"
+                        <EditText
+                            android:id="@+id/hexAEdit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|start"
+                            android:text="What was your A...?"
+                            android:background="@android:color/transparent"
+                            android:layout_weight="0.84"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/hexBLayout"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Enter text..."
-                        android:layout_weight="0.42"
-                        android:paddingLeft="3dp"
-                        android:paddingRight="3dp"/>
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/rounded_corner"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:weightSum="1.0">
+                        <TextView
+                            android:id="@+id/hexBText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:maxLines="4"
+                            android:text="@string/hexB"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:textSize="20sp"
+                            android:layout_weight="0.16"/>
 
-                    <TextView
-                        android:id="@+id/hexBText"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="B"
-                        android:paddingLeft="3dp"
-                        android:paddingRight="3dp"
-                        android:textSize="20sp"
-                        android:layout_weight="0.08"/>
-
-                    <EditText
-                        android:id="@+id/hexBEdit"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Enter text..."
-                        android:layout_weight="0.42"
-                        android:paddingLeft="3dp"
-                        android:paddingRight="3dp"/>
-
+                        <EditText
+                            android:id="@+id/hexBEdit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="What was your B...?"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:background="@android:color/transparent"
+                            android:maxLines="4"
+                            android:gravity="top|start"
+                            android:layout_weight="0.84"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"/>
+                    </LinearLayout>
                 </LinearLayout>
 
     <LinearLayout
@@ -102,11 +124,11 @@
         android:orientation="horizontal"
         android:id="@+id/breakfastLayout"
         android:layout_below="@id/hexLayout"
-        android:background="@color/diaryFieldBackground"
+        android:background="@drawable/rounded_corner"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
         android:weightSum="1.0">
 
         <TextView
@@ -114,7 +136,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:text="Breakfast"
+            android:text="@string/breakfast"
             android:textSize="20sp"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
@@ -124,8 +146,11 @@
             android:layout_width="0dp"
             android:layout_weight="0.7"
             android:layout_height="70dp"
+            android:inputType="textCapSentences|textMultiLine"
             android:background="@android:color/transparent"
-            android:text="Breakfast Text..."
+            android:maxLines="4"
+            android:gravity="top|start"
+            android:text="Tell me what you had for Breakfast..."
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
 
@@ -137,7 +162,7 @@
         android:orientation="horizontal"
         android:id="@+id/lunchLayout"
         android:layout_below="@id/breakfastLayout"
-        android:background="@color/diaryFieldBackground"
+        android:background="@drawable/rounded_corner"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"
@@ -149,7 +174,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:text="Lunch"
+            android:text="@string/lunch"
             android:textSize="20sp"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
@@ -159,7 +184,11 @@
             android:layout_width="0dp"
             android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Lunch Text..."
+            android:text="Tell me what you had for Lunch..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:background="@android:color/transparent"
+            android:maxLines="4"
+            android:gravity="top|start"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
 
@@ -171,7 +200,7 @@
         android:orientation="horizontal"
         android:id="@+id/dinnerLayout"
         android:layout_below="@id/lunchLayout"
-        android:background="@color/diaryFieldBackground"
+        android:background="@drawable/rounded_corner"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"
@@ -183,7 +212,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:text="Dinner"
+            android:text="@string/dinner"
             android:textSize="20sp"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
@@ -193,7 +222,12 @@
             android:layout_width="0dp"
             android:layout_weight="0.7"
             android:layout_height="70dp"
-            android:text="Dinner Text..."
+            android:text="Tell me what you had for Dinner..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:background="@android:color/transparent"
+            android:maxLines="4"
+            android:isScrollContainer="true"
+            android:gravity="top|start"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
 
@@ -201,11 +235,319 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        android:id="@+id/snacksWaterTreatsLayout"
+        android:layout_below="@id/dinnerLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:weightSum="1.0">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical"
+        android:weightSum="1.0"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp">
+        <TextView
+            android:id="@+id/snacksText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:text="@string/snacks"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
+
+        <EditText
+            android:id="@+id/snacksEdit"
+            android:layout_width="match_parent"
+            android:layout_weight="0.75"
+            android:layout_height="0dp"
+            android:text="What Snacks have you had...?"
+            android:background="@android:color/transparent"
+            android:gravity="top|left"
+            android:layout_gravity="top|left"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_weight="0.5"
+        android:id="@+id/treatsLayout"
+        android:orientation="vertical"
+        android:weightSum="1.0"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner"
+            android:layout_weight="0.25"
+            android:layout_marginBottom="1dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/treatsText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/treats"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
+            android:columnCount="5"
+            android:rowCount="3">
+
+            <TextView
+                android:id="@+id/treatsText1"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/one"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_row="0"/>
+            <TextView
+                android:id="@+id/treatsText4"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/two"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_row="0"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/three"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:layout_row="0"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/four"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_row="0"/>
+
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/five"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="4"
+                android:layout_row="0"/>
+
+
+            <TextView
+                android:id="@+id/treatsText2"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/six"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_row="1"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/seven"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_row="1"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/eight"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:layout_row="1"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/nine"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_row="1"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/ten"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="4"
+                android:layout_row="1"/>
+
+            <TextView
+                android:id="@+id/treatsText3"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/eleven"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_row="2"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/twelve"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_row="2"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/thirteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:layout_row="2"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fourteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_row="2"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="4"
+                android:layout_row="2"/>
+
+        </GridLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/snacksLayout"
-        android:layout_below="@id/dinnerLayout"
-        android:background="@color/diaryFieldBackground"
+        android:id="@+id/waterLayout"
+        android:layout_below="@id/snacksWaterTreatsLayout"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"
@@ -213,23 +555,138 @@
         android:weightSum="1.0">
 
         <TextView
-            android:id="@+id/snacksText"
+            android:id="@+id/waterText"
+            android:background="@drawable/rounded_corner"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:text="Snacks"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:text="@string/water"
             android:textSize="20sp"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
 
-        <EditText
-            android:id="@+id/snacksEdit"
+        <GridLayout
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.7"
-            android:layout_height="70dp"
-            android:text="Snacks Text..."
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"/>
+            android:columnCount="4"
+            android:rowCount="2">
+
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_row="0"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_row="0"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:layout_row="0"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_row="0"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_row="1"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_row="1"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:layout_row="1"/>
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:text="@string/fifteen"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_row="1"/>
+        </GridLayout>
 
     </LinearLayout>
 
@@ -238,8 +695,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/exerciseLayout"
-        android:layout_below="@id/snacksLayout"
-        android:background="@color/diaryFieldBackground"
+        android:layout_below="@id/waterLayout"
+        android:background="@drawable/rounded_corner"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"
@@ -262,77 +719,11 @@
             android:layout_weight="0.7"
             android:layout_height="70dp"
             android:text="Exercise Text..."
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/waterLayout"
-        android:layout_below="@id/exerciseLayout"
-        android:background="@color/diaryFieldBackground"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginBottom="2.5dp"
-        android:weightSum="1.0">
-
-        <TextView
-            android:id="@+id/waterText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:text="Water"
-            android:textSize="20sp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"/>
-
-        <EditText
-            android:id="@+id/waterEdit"
-            android:layout_width="0dp"
-            android:layout_weight="0.7"
-            android:layout_height="70dp"
-            android:text="Water Images..."
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/treatsLayout"
-        android:layout_below="@id/waterLayout"
-        android:background="@color/diaryFieldBackground"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginBottom="2.5dp"
-        android:weightSum="1.0">
-
-        <TextView
-            android:id="@+id/treatsText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:text="Treats"
-            android:textSize="20sp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"/>
-
-        <EditText
-            android:id="@+id/treatsEdit"
-            android:layout_width="0dp"
-            android:layout_weight="0.7"
-            android:layout_height="70dp"
-            android:text="Treats Images..."
+            android:background="@android:color/transparent"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"/>
 
     </LinearLayout>
 
 </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hooper.kenneth.fooddiary.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:layout_gravity="center"
+    android:gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/AandBLayout"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="2.5dp"
+    android:layout_marginBottom="2.5dp">
+
+        <TextView
+            android:id="@+id/AandBMainText"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Healthy Extras"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"/>
+
+        <TextView
+            android:id="@+id/FoodMainText"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Food"
+            android:layout_gravity="center"
+            android:layout_below="@id/AandBMainText"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"/>
+
+        <TextView
+            android:id="@+id/SnacksTreatsWaterMainText"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/FoodMainText"
+            android:text="Snacks, Treats and Water"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"/>
+
+        <TextView
+            android:id="@+id/ExerciseMainText"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/SnacksTreatsWaterMainText"
+            android:text="Exercise"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"/>
+
+</RelativeLayout>
+
+

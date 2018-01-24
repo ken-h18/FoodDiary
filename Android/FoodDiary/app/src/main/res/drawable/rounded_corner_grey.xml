@@ -2,9 +2,9 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
     <stroke
         android:width="1dp"
-        android:color="@color/diaryFieldBackground" />
+        android:color="@color/black" />
 
-    <solid android:color="@color/diaryFieldBackground" />
+    <solid android:color="@color/diaryFieldBackgroundGrey" />
 
     <padding
         android:left="1dp"

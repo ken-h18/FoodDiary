@@ -10,15 +10,12 @@
     android:layout_gravity="center"
     android:gravity="center"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:id="@+id/AandBLayout"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="2.5dp"
-    android:layout_marginBottom="2.5dp">
+    android:background="@color/diaryFieldBackgroundGrey"
+    android:id="@+id/main_options_layout">
 
-        <TextView
-            android:id="@+id/AandBMainText"
-            android:background="@drawable/rounded_corner"
+        <Button
+            android:id="@+id/AandBMainButton"
+            android:background="@drawable/rounded_corner_pink"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:text="Healthy Extras"
@@ -32,14 +29,14 @@
             android:layout_marginTop="2.5dp"
             android:layout_marginBottom="2.5dp"/>
 
-        <TextView
-            android:id="@+id/FoodMainText"
-            android:background="@drawable/rounded_corner"
+        <Button
+            android:id="@+id/FoodMainButton"
+            android:background="@drawable/rounded_corner_blue"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Food"
+            android:text="Breakfast, Lunch and Dinner"
             android:layout_gravity="center"
-            android:layout_below="@id/AandBMainText"
+            android:layout_below="@id/AandBMainButton"
             android:gravity="center"
             android:textSize="30sp"
             android:paddingLeft="3dp"
@@ -49,12 +46,12 @@
             android:layout_marginTop="2.5dp"
             android:layout_marginBottom="2.5dp"/>
 
-        <TextView
-            android:id="@+id/SnacksTreatsWaterMainText"
-            android:background="@drawable/rounded_corner"
+        <Button
+            android:id="@+id/SnacksTreatsWaterMainButton"
+            android:background="@drawable/rounded_corner_orange"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_below="@id/FoodMainText"
+            android:layout_below="@id/FoodMainButton"
             android:text="Snacks, Treats and Water"
             android:layout_gravity="center"
             android:gravity="center"
@@ -66,12 +63,12 @@
             android:layout_marginTop="2.5dp"
             android:layout_marginBottom="2.5dp"/>
 
-        <TextView
-            android:id="@+id/ExerciseMainText"
-            android:background="@drawable/rounded_corner"
+        <Button
+            android:id="@+id/ExerciseMainButton"
+            android:background="@drawable/rounded_corner_yellow"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_below="@id/SnacksTreatsWaterMainText"
+            android:layout_below="@id/SnacksTreatsWaterMainButton"
             android:text="Exercise"
             android:layout_gravity="center"
             android:gravity="center"

@@ -57,7 +57,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:background="@drawable/rounded_corner"
+                        android:background="@drawable/rounded_corner_grey"
                         android:layout_marginRight="2dp"
                         android:layout_marginEnd="2dp"
                         android:weightSum="1.0">
@@ -87,7 +87,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:background="@drawable/rounded_corner"
+                        android:background="@drawable/rounded_corner_grey"
                         android:layout_marginLeft="2dp"
                         android:layout_marginStart="2dp"
                         android:weightSum="1.0">
@@ -124,7 +124,7 @@
         android:orientation="horizontal"
         android:id="@+id/breakfastLayout"
         android:layout_below="@id/hexLayout"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_grey"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"
@@ -162,7 +162,7 @@
         android:orientation="horizontal"
         android:id="@+id/lunchLayout"
         android:layout_below="@id/breakfastLayout"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_grey"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"
@@ -200,7 +200,7 @@
         android:orientation="horizontal"
         android:id="@+id/dinnerLayout"
         android:layout_below="@id/lunchLayout"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_grey"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"
@@ -249,7 +249,7 @@
         android:layout_width="0dp"
         android:layout_height="160dp"
         android:layout_weight="0.5"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_grey"
         android:orientation="vertical"
         android:weightSum="1.0"
         android:layout_marginRight="2dp"
@@ -295,7 +295,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner_grey"
             android:layout_weight="0.25"
             android:layout_marginBottom="1dp"
             android:weightSum="1">
@@ -320,7 +320,7 @@
 
             <TextView
                 android:id="@+id/treatsText1"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/one"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -335,7 +335,7 @@
                 android:layout_row="0"/>
             <TextView
                 android:id="@+id/treatsText4"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/two"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -349,7 +349,7 @@
                 android:layout_column="1"
                 android:layout_row="0"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/three"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -363,7 +363,7 @@
                 android:layout_column="2"
                 android:layout_row="0"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/four"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -378,7 +378,7 @@
                 android:layout_row="0"/>
 
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/five"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -395,7 +395,7 @@
 
             <TextView
                 android:id="@+id/treatsText2"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/six"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -409,7 +409,7 @@
                 android:layout_column="0"
                 android:layout_row="1"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/seven"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -423,7 +423,7 @@
                 android:layout_column="1"
                 android:layout_row="1"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/eight"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -437,7 +437,7 @@
                 android:layout_column="2"
                 android:layout_row="1"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/nine"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -451,7 +451,7 @@
                 android:layout_column="3"
                 android:layout_row="1"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/ten"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -467,7 +467,7 @@
 
             <TextView
                 android:id="@+id/treatsText3"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/eleven"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -481,7 +481,7 @@
                 android:layout_column="0"
                 android:layout_row="2"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/twelve"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -495,7 +495,7 @@
                 android:layout_column="1"
                 android:layout_row="2"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/thirteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -509,7 +509,7 @@
                 android:layout_column="2"
                 android:layout_row="2"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fourteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -523,7 +523,7 @@
                 android:layout_column="3"
                 android:layout_row="2"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -556,7 +556,7 @@
 
         <TextView
             android:id="@+id/waterText"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner_grey"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
@@ -575,7 +575,7 @@
             android:rowCount="2">
 
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -589,7 +589,7 @@
                 android:layout_column="0"
                 android:layout_row="0"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -603,7 +603,7 @@
                 android:layout_column="1"
                 android:layout_row="0"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -617,7 +617,7 @@
                 android:layout_column="2"
                 android:layout_row="0"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -631,7 +631,7 @@
                 android:layout_column="3"
                 android:layout_row="0"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -645,7 +645,7 @@
                 android:layout_column="0"
                 android:layout_row="1"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -659,7 +659,7 @@
                 android:layout_column="1"
                 android:layout_row="1"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -673,7 +673,7 @@
                 android:layout_column="2"
                 android:layout_row="1"/>
             <TextView
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_grey"
                 android:text="@string/fifteen"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
@@ -696,7 +696,7 @@
         android:orientation="horizontal"
         android:id="@+id/exerciseLayout"
         android:layout_below="@id/waterLayout"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_grey"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="2.5dp"

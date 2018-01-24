@@ -11,22 +11,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class AandBActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_options);
+        setContentView(R.layout.activity_a_and_b);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button aAndBButton = (Button) findViewById(R.id.AandBMainButton);
-        aAndBButton.setOnClickListener(new View.OnClickListener() {
+        Button doneButton = (Button) findViewById(R.id.AndBdoneButton);
+        doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
-                Intent AandBIntent = new Intent(getApplicationContext(), AandBActivity.class);
-                startActivity(AandBIntent);
-                //finish();
+                finish();
             }
         });
     }

@@ -4,9 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.hooper.kenneth.fooddiary.MainActivity"
-    tools:showIn="@layout/activity_main"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 <RelativeLayout

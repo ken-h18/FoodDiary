@@ -11,42 +11,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class BreakLunchDinnerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_options);
+        setContentView(R.layout.activity_break_lunch_dinner);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button aAndBButton = (Button) findViewById(R.id.AandBMainButton);
-        aAndBButton.setOnClickListener(new View.OnClickListener() {
+        Button doneButton = (Button) findViewById(R.id.FoodDoneButton);
+        doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
-                Intent AandBIntent = new Intent(getApplicationContext(), AandBActivity.class);
-                startActivity(AandBIntent);
-                //finish();
-            }
-        });
-
-        Button foodButton = (Button) findViewById(R.id.FoodMainButton);
-        foodButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)
-            {
-                Intent AandBIntent = new Intent(getApplicationContext(), BreakLunchDinnerActivity.class);
-                startActivity(AandBIntent);
-                //finish();
-            }
-        });
-
-        Button snacksButton = findViewById(R.id.SnacksTreatsWaterMainButton);
-        snacksButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)
-            {
-                Intent snakcsIntent = new Intent(getApplicationContext(), SnacksTreatsWaterActivity.class);
-                startActivity(snakcsIntent);
-                //finish();
+                finish();
             }
         });
     }

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/diaryFieldBackgroundGrey"
+    android:id="@+id/breakLunchDinnerLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/MealsHeading"
+                android:background="@drawable/rounded_corner_white"
+                android:text="Meals"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.26"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/BreakfastText"
+                android:background="@drawable/rounded_corner_blue"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.18"
+                android:text="Breakfast"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/BreakfastEdit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.82"
+                android:inputType="textCapSentences|textMultiLine"
+                android:background="@drawable/rounded_corner_white"
+                android:layout_gravity="center"
+                android:gravity="top|start"
+                android:textSize="18sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.26"
+            android:weightSum="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/LunchText"
+                android:background="@drawable/rounded_corner_orange"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.18"
+                android:text="Lunch"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/LunchEdit"
+                android:background="@drawable/rounded_corner_white"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.82"
+                android:inputType="textCapSentences|textMultiLine"
+                android:layout_gravity="center"
+                android:gravity="top|start"
+                android:textSize="18sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.28"
+            android:weightSum="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/DinnerText"
+                android:background="@drawable/rounded_corner_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.18"
+                android:text="Dinner"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/DinnerEdit"
+                android:background="@drawable/rounded_corner_white"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.82"
+                android:inputType="textCapSentences|textMultiLine"
+                android:layout_gravity="center"
+                android:gravity="top|start"
+                android:textSize="18sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.1">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:id="@+id/FoodDoneButton"
+                android:background="@drawable/rounded_corner_white"
+                android:text="Done"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

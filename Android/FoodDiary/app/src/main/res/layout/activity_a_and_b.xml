@@ -4,9 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.hooper.kenneth.fooddiary.MainActivity"
-    tools:showIn="@layout/activity_main"
     android:layout_gravity="center"
     android:gravity="center"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -61,7 +58,7 @@
             android:layout_weight="0.18"
             android:text="A"
             android:gravity="center"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
             android:layout_marginLeft="10dp"
@@ -69,15 +66,15 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"/>
 
-        <TextView
+        <EditText
             android:id="@+id/FoodMainText"
-            android:background="@drawable/rounded_corner_white"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.82"
-            android:text=""
+            android:inputType="textCapSentences|textMultiLine"
+            android:background="@drawable/rounded_corner_white"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:gravity="top|start"
             android:textSize="30sp"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
@@ -114,16 +111,16 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"/>
 
-        <TextView
+        <EditText
             android:id="@+id/ExerciseMainText"
             android:background="@drawable/rounded_corner_white"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.82"
-            android:text=""
+            android:inputType="textCapSentences|textMultiLine"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="30sp"
+            android:gravity="top|start"
+            android:textSize="20sp"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
             android:layout_marginLeft="10dp"

@@ -2,8 +2,6 @@ package com.hooper.kenneth.fooddiary;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -17,26 +15,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_options);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button aAndBButton = (Button) findViewById(R.id.AandBMainButton);
+        Button aAndBButton = findViewById(R.id.AandBMainButton);
         aAndBButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
                 Intent AandBIntent = new Intent(getApplicationContext(), AandBActivity.class);
                 startActivity(AandBIntent);
-                //finish();
             }
         });
 
-        Button foodButton = (Button) findViewById(R.id.FoodMainButton);
+        Button foodButton = findViewById(R.id.FoodMainButton);
         foodButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
                 Intent AandBIntent = new Intent(getApplicationContext(), BreakLunchDinnerActivity.class);
                 startActivity(AandBIntent);
-                //finish();
             }
         });
 
@@ -46,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             {
                 Intent snakcsIntent = new Intent(getApplicationContext(), SnacksTreatsWaterActivity.class);
                 startActivity(snakcsIntent);
-                //finish();
             }
         });
     }

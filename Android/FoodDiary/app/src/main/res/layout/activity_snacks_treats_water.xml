@@ -58,7 +58,6 @@
                     android:layout_width="match_parent"
                     android:layout_weight="0.75"
                     android:layout_height="0dp"
-                    android:text="What Snacks have you had...?"
                     android:background="@android:color/transparent"
                     android:gravity="top|start"
                     android:layout_gravity="top|start"

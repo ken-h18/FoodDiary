@@ -1,13 +1,15 @@
 package com.hooper.kenneth.fooddiary;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,11 +30,14 @@ public class SnacksTreatsWaterActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        EditText snacksEditText;
+
         createAndInitialiseDoneButton();
 
         initialiseTreatList(treatList);
-        handleTreatTouchListener(treatList);
 
+        snacksEditText = findViewById(R.id.snacksEdit);
+        formatEditTextWithBulletPoints(snacksEditText);
 
     }
 
@@ -93,12 +98,7 @@ public class SnacksTreatsWaterActivity extends AppCompatActivity {
         }
     }
 
-    private void handleTreatTouchListener(final List<TextView> treatList)
-    {
-
-    }
-
-    public void treatClickHandler(View target)
+    private void treatClickHandler(View target)
     {
         for(int i = 0; i < treatMaxNumber; i++) {
             if (target.getId() == treatList.get(i).getId()) {
@@ -118,5 +118,43 @@ public class SnacksTreatsWaterActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private void formatEditTextWithBulletPoints(final EditText editText)
+    {
+
+        if(editText.getText().toString().isEmpty())
+        {
+            editText.append("\u2022" + " ");
+        }
+
+        editText.addTextChangedListener(new TextWatcher()
+        {
+            @Override
+            public void afterTextChanged(Editable mEdit)
+            {
+
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after){
+
+                System.out.println("BEFORE " + s.length());
+                /*if(s.length() == 0)
+                {
+                    editTextNeedsBulletPoint = true;
+                }*/
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count){
+                System.out.println("AFTER " + s.length());
+
+                if(s.length() > 0) {
+                    if (s.toString().substring(s.length() - 1).equals("\n") && before == 0) {
+                        editText.append("\u2022" + " ");
+                        Toast.makeText(getApplicationContext(), Integer.toString(s.length()), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
 }
